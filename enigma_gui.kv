@@ -1,0 +1,319 @@
+EnigmaScreen:
+
+<EnigmaScreen>:
+    orientation: 'vertical' 
+    # padding = [left, top, right, bottom]   
+    padding: 10
+
+    BoxLayout:
+        orientation: 'horizontal'
+        padding: [10, 0, 10, 0] 
+        size_hint_y: 0.3
+
+        BoxLayout:
+            orientation: 'vertical'
+
+            Label:
+                text: "  step1: Please select the scrambler number to use."
+                size_hint_y: 0.3
+                text_size: self.size
+                halign: 'left'
+                valign: 'center'
+        
+            GridLayout:
+                cols: 2
+
+                Label:
+                    text: "slot1:"
+                Spinner:
+                    text: root.slot1_scrambler_number
+                    values: '1', '2', '3', '4', '5'
+                    on_text:
+                        root.slot1_scrambler_number = self.text
+                Label:
+                    text: "slot2:"
+                Spinner:
+                    text: root.slot2_scrambler_number
+                    values: '1', '2', '3', '4', '5'
+                    on_text:
+                        root.slot2_scrambler_number = self.text
+                Label:
+                    text: "slot3:"
+                Spinner:
+                    text: root.slot3_scrambler_number
+                    values: '1', '2', '3', '4', '5'
+                    on_text:
+                        root.slot3_scrambler_number = self.text
+
+        BoxLayout:
+            orientation: 'vertical'
+
+            Label:
+                text: "  step2: Please set the initial position of the scrambler."
+                size_hint_y: 0.3
+                text_size: self.size
+                halign: 'left'
+                valign: 'center'
+
+            GridLayout:
+                cols: 2
+
+                Label:
+                    text: "Initial position(slot1):"   
+                Spinner:
+                    text: root.slot1_initial_position
+                    values: [chr(num) for num in range(97, 123)]
+                    on_text:
+                        slot1_initial_position = self.text
+                Label:
+                    text: "Initial position(slot2):"
+                Spinner:
+                    text: root.slot2_initial_position
+                    values: [chr(num) for num in range(97, 123)]
+                    on_text:
+                        slot2_initial_position = self.text
+                Label:
+                    text: "Initial position(slot3):"
+                Spinner:
+                    text: root.slot3_initial_position
+                    values: [chr(num) for num in range(97, 123)]
+                    on_text:
+                        slot3_initial_position = self.text
+                
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10
+
+        Label:
+            text: "  step3: Please set the plug board."
+            text_size: self.size
+            size_hint_y: 0.1
+            halign: 'left'
+            valign: 'center'
+
+        GridLayout:
+            cols: 8
+
+            Label:
+                text: "a to :"
+            Spinner:
+                text: root.plugboard_list[0]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(0, self.text)
+            Label:
+                text: "b to :"
+            Spinner:
+                text: root.plugboard_list[1]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(1, self.text)
+            Label:
+                text: "c to :"
+            Spinner:
+                text: root.plugboard_list[2]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(2, self.text)
+
+            Label:
+                text: "d to :"
+            Spinner:
+                text: root.plugboard_list[3]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(3, self.text)
+            Label:
+                text: "e to :"
+            Spinner:
+                text: root.plugboard_list[4]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(4, self.text)
+            Label:
+                text: "f to :"
+            Spinner:
+                text: root.plugboard_list[5]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(5, self.text)
+
+            Label:
+                text: "g to :"
+            Spinner:
+                text: root.plugboard_list[6]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(6, self.text)
+            Label:
+                text: "h to :"
+            Spinner:
+                text: root.plugboard_list[7]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(7, self.text)
+            Label:
+                text: "i to :"
+            Spinner:
+                text: root.plugboard_list[8]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(8, self.text)
+
+            Label:
+                text: "j to :"
+            Spinner:
+                text: root.plugboard_list[9]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(9, self.text)
+            Label:
+                text: "k to :"
+            Spinner:
+                text: root.plugboard_list[10]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(10, self.text)
+            Label:
+                text: "l to :"
+            Spinner:
+                text: root.plugboard_list[11]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(11, self.text)
+
+            Label:
+                text: "n to :"
+            Spinner:
+                text: root.plugboard_list[12]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(12, self.text)
+            Label:
+                text: "m to :"
+            Spinner:
+                text: root.plugboard_list[13]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(13, self.text)
+            Label:
+                text: "o to :"
+            Spinner:
+                text: root.plugboard_list[14]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(14, self.text)
+
+            Label:
+                text: "p to :"
+            Spinner:
+                text: root.plugboard_list[15]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(15, self.text)
+            Label:
+                text: "q to :"
+            Spinner:
+                text: root.plugboard_list[16]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(16, self.text)
+            Label:
+                text: "r to :"
+            Spinner:
+                text: root.plugboard_list[17]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(17, self.text)
+
+            Label:
+                text: "s to :"
+            Spinner:
+                text: root.plugboard_list[18]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(18, self.text)
+            Label:
+                text: "t to :"
+            Spinner:
+                text: root.plugboard_list[19]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(19, self.text)
+            Label:
+                text: "u to :"
+            Spinner:
+                text: root.plugboard_list[20]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(20, self.text)
+
+            Label:
+                text: "v to :"
+            Spinner:
+                text: root.plugboard_list[21]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(21, self.text)
+            Label:
+                text: "w to :"
+            Spinner:
+                text: root.plugboard_list[22]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(22, self.text)
+            Label:
+                text: "x to :"
+            Spinner:
+                text: root.plugboard_list[23]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(23, self.text)
+
+            Label:
+                text: "y to :"
+            Spinner:
+                text: root.plugboard_list[24]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(24, self.text)
+            Label:
+                text: "z to :"
+            Spinner:
+                text: root.plugboard_list[25]
+                values: [chr(num) for num in range(97, 123)]
+                on_text:
+                    root.change_plugboard(25, self.text)
+
+
+
+    BoxLayout:
+        orientation: 'vertical' 
+        padding: [10, 0, 10, 0]
+        size_hint_y: 0.4
+
+        Label:
+            text: "  step4: Please enter the string you want to encrypt."
+            text_size: self.size
+            size_hint_y: 0.2
+            halign: 'left'
+            valign: 'center'
+
+        GridLayout:
+            cols: 2
+            pos_hint: {'center_x': .5, 'center_y': .5}
+
+            Label:
+                text: "Input:"
+                size_hint_x: 0.3
+            TextInput:
+                text: root.input_string
+                on_text:
+                    root.input_string = self.text
+                    root.run_encryption()
+            Label:
+                text: "Output:"
+                size_hint_x: 0.3
+            TextInput:
+                text: root.output_string
