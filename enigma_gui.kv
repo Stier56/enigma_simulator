@@ -64,21 +64,21 @@ EnigmaScreen:
                     text: root.slot1_initial_position
                     values: [chr(num) for num in range(97, 123)]
                     on_text:
-                        slot1_initial_position = self.text
+                        root.slot1_initial_position = self.text
                 Label:
                     text: "Initial position(slot2):"
                 Spinner:
                     text: root.slot2_initial_position
                     values: [chr(num) for num in range(97, 123)]
                     on_text:
-                        slot2_initial_position = self.text
+                        root.slot2_initial_position = self.text
                 Label:
                     text: "Initial position(slot3):"
                 Spinner:
                     text: root.slot3_initial_position
                     values: [chr(num) for num in range(97, 123)]
                     on_text:
-                        slot3_initial_position = self.text
+                        root.slot3_initial_position = self.text
                 
 
     BoxLayout:
