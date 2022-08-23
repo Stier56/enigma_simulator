@@ -9,3 +9,8 @@ GUIで操作可能です。
 ## Useage
 GUI操作を可能にするためにオープンソースライブラリであるKivyを使用しています。  
 使用される際は、[リンク](https://kivy.org/doc/stable/gettingstarted/installation.html)を参考にkivyをインストールする必要があります。
+
+
+## Note
+暗号化は半角アルファベットの小文字のみ可能です。  
+上記以外(空白を含む)を入力した場合は、すべて空白で出力されます。
