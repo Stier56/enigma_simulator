@@ -2,6 +2,10 @@ THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
 
 This project incorporates components from the projects listed below.
 
+## Python
+```
+Copyright © 2001-2022 Python Software Foundation; All Rights Reserved
+```
 
 ## kivy
 source: https://github.com/kivy/kivy  
