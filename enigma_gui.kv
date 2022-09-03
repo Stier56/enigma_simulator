@@ -14,7 +14,7 @@ EnigmaScreen:
             orientation: 'vertical'
 
             Label:
-                text: "  step1: Please select the scrambler number to use."
+                text: "  step1: Please select the rotor number to use."
                 size_hint_y: 0.3
                 text_size: self.size
                 halign: 'left'
@@ -26,30 +26,30 @@ EnigmaScreen:
                 Label:
                     text: "slot1:"
                 Spinner:
-                    text: root.slot1_scrambler_number
+                    text: root.slot1_rotor_number
                     values: '1', '2', '3', '4', '5'
                     on_text:
-                        root.slot1_scrambler_number = self.text
+                        root.slot1_rotor_number = self.text
                 Label:
                     text: "slot2:"
                 Spinner:
-                    text: root.slot2_scrambler_number
+                    text: root.slot2_rotor_number
                     values: '1', '2', '3', '4', '5'
                     on_text:
-                        root.slot2_scrambler_number = self.text
+                        root.slot2_rotor_number = self.text
                 Label:
                     text: "slot3:"
                 Spinner:
-                    text: root.slot3_scrambler_number
+                    text: root.slot3_rotor_number
                     values: '1', '2', '3', '4', '5'
                     on_text:
-                        root.slot3_scrambler_number = self.text
+                        root.slot3_rotor_number = self.text
 
         BoxLayout:
             orientation: 'vertical'
 
             Label:
-                text: "  step2: Please set the initial position of the scrambler."
+                text: "  step2: Please set the initial position of the rotor."
                 size_hint_y: 0.3
                 text_size: self.size
                 halign: 'left'

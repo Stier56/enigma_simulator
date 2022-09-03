@@ -6,9 +6,9 @@ from enigma_gui_component import encryption
 
 
 class EnigmaScreen(BoxLayout):
-    slot1_scrambler_number = StringProperty('1')
-    slot2_scrambler_number = StringProperty('1')
-    slot3_scrambler_number = StringProperty('1')
+    slot1_rotor_number = StringProperty('1')
+    slot2_rotor_number = StringProperty('1')
+    slot3_rotor_number = StringProperty('1')
 
     slot1_initial_position = StringProperty('a')
     slot2_initial_position = StringProperty('a')
@@ -30,9 +30,9 @@ class EnigmaScreen(BoxLayout):
 
     def run_encryption(self): 
         self.output_string = encryption(self.input_string,
-                                        self.slot1_scrambler_number, 
-                                        self.slot2_scrambler_number, 
-                                        self.slot3_scrambler_number, 
+                                        self.slot1_rotor_number, 
+                                        self.slot2_rotor_number, 
+                                        self.slot3_rotor_number, 
                                         self.slot1_initial_position, 
                                         self.slot2_initial_position, 
                                         self.slot3_initial_position,
